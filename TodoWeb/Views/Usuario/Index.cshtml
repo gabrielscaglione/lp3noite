@@ -18,15 +18,22 @@
             <tr>
                 <th>UsuarioId</th>
                 <th>Nome</th>
+                <th>Email</th>
+                <th>Senha</th>
             </tr>
            
             @*foreach (TodoWeb.Models.Usuario u in ViewBag.Usuarios)*@
             @foreach (var u in Model)
             {
-                    <tr>
-                        <td>@u.UsuarioID</td>
-                        <td>@u.Nome</td>
-                    </tr>
+                <tr>
+                    <td><center>@u.UsuarioID</center></td>  
+                    <td><center>@u.Nome</center></td>
+                    <td><center>@u.Email</center></td>
+                    <td><center>@u.Senha</center></td>
+                </tr>
+               
+                  
+                    
             }
 
             </table>
