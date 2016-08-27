@@ -1,0 +1,36 @@
+﻿@*Passando para o index uma lista de usuário (Interface padrão de todas as Colections)*@
+@model IEnumerable<TodoWeb.Models.Usuario>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr>
+                <th>UsuarioId</th>
+                <th>Nome</th>
+            </tr>
+           
+            @*foreach (TodoWeb.Models.Usuario u in ViewBag.Usuarios)*@
+            @foreach (var u in Model)
+            {
+                    <tr>
+                        <td>@u.UsuarioID</td>
+                        <td>@u.Nome</td>
+                    </tr>
+            }
+
+            </table>
+        <a href="/Usuario/create"/>Adicionar</a>
+        </div>
+    </body>
+    </html>
